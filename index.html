@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Academic & Professional Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(120deg,#eef2f7,#dfe9f3);
+    color:#222;
+}
+
+/* HEADER */
+header{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+}
+
+nav a{
+    color:#fff;
+    margin-left:30px;
+    text-decoration:none;
+    font-size:14px;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#25D366;
+    left:0;
+    bottom:-6px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:38px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:16px;
+    color:#444;
+    line-height:1.8;
+}
+
+/* SERVICES */
+.services{
+    padding:70px 60px;
+}
+
+.services h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:50px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.service-card{
+    background:#ffffff;
+    border-radius:16px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.35s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#f1f4f9;
+    font-size:34px;
+}
+
+.service-card h3{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:22px;
+}
+
+.service-card button{
+    background:linear-gradient(135deg,#25D366,#1ebe57);
+    border:none;
+    color:#fff;
+    padding:12px 22px;
+    font-size:14px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* CONTACT */
+.contact{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    font-size:16px;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.whatsapp-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:linear-gradient(135deg,#25D366,#1ebe57);
+    color:#fff;
+    padding:14px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+}
+
+/* FOOTER */
+footer{
+    background:#0f2027;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    font-size:13px;
+    margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Academic & Professional Services</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Your One-Stop Academic & Design Solution</h2>
+    <p>
+        We provide professional assignments, PPT presentations, notes preparation,
+        poster designs, and advertisement creatives — all delivered with quality,
+        affordability, and timely support.
+    </p>
+</section>
+
+<section class="services" id="services">
+<h2>Our Incredible Services</h2>
+
+<div class="service-grid">
+
+    <div class="service-card">
+        <div class="service-icon">📘</div>
+        <h3>Assignment Writing</h3>
+        <p>Professional assignments for any subject (Rs.150)</p>
+        <button onclick="orderWhatsApp('Assignment Writing')">Order on WhatsApp</button>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>PPT Presentation</h3>
+        <p>Professional PowerPoint slides (Rs.250)</p>
+        <button onclick="orderWhatsApp('PPT Presentation')">Order on WhatsApp</button>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📝</div>
+        <h3>Notes Preparation</h3>
+        <p>Easy notes for exams & revision (Rs.300)</p>
+        <button onclick="orderWhatsApp('Notes Preparation')">Order on WhatsApp</button>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🖼️</div>
+        <h3>Poster Design</h3>
+        <p>Creative posters & banners (Rs.380)</p>
+        <button onclick="orderWhatsApp('Poster Design')">Order on WhatsApp</button>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📢</div>
+        <h3>Advertisement Design</h3>
+        <p>Social media & print ads (Rs.300)</p>
+        <button onclick="orderWhatsApp('Advertisement Design')">Order on WhatsApp</button>
+    </div>
+
+    <div class="service-card">
+    <div class="service-icon">🎯</div>
+    <h3>Custom Academic Work</h3>
+    <p>Any academic or design task tailored to your requirements (Rs.400)</p>
+    <button onclick="orderWhatsApp('Custom Academic Work')">
+        Order on WhatsApp
+    </button>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Click below to order or inquire directly on WhatsApp</p>
+
+    <a class="whatsapp-btn" href="https://wa.me/923173516616" target="_blank">
+        <i class="fab fa-whatsapp"></i> 0317-3516616
+    </a>
+</section>
+
+<footer>
+© 2025 Academic & Design Hub | Orders via WhatsApp
+</footer>
+
+<script>
+function orderWhatsApp(service){
+    var phone="923173516616";
+    var msg=
+    "Hello, I want to order *"+service+"*.%0A"+
+    "Subject / Topic:%0A"+
+    "Deadline:%0A"+
+    "Details:%0A";
+
+    window.open("https://wa.me/"+phone+"?text="+msg,"_blank");
+}
+</script>
+
+</body>
+</html>
