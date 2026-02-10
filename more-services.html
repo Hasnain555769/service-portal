@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Academic Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background:linear-gradient(120deg,#f8fafc,#eef2f7);
+    color:#1f2933;
+}
+
+/* NAVBAR */
+.navbar{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    padding:16px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
+}
+
+/* SERVICES */
+.services{
+    padding:80px 60px;
+}
+.services h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:50px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.service-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+}
+
+.service-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#eef2f7;
+    font-size:34px;
+    transition:.3s;
+}
+.service-card:hover .service-icon{
+    transform:scale(1.1) rotate(4deg);
+}
+
+.service-card h3{
+    font-size:18px;
+    margin-bottom:12px;
+    transition:.3s;
+}
+.service-card h3:hover{ color:#25D366; }
+
+.service-card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:22px;
+}
+
+.service-card button{
+    background:linear-gradient(135deg,#25D366,#1ebe57);
+    border:none;
+    color:#fff;
+    padding:12px 24px;
+    font-size:14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+.service-card button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,211,102,.45);
+}
+
+/* BACK BUTTON */
+.back-btn{
+    display:inline-block;
+    margin-top:60px;
+    background:#0f2027;
+    color:#fff;
+    padding:12px 26px;
+    border-radius:8px;
+    text-decoration:none;
+    transition:.3s;
+}
+.back-btn:hover{
+    background:#25D366;
+}
+
+/* FOOTER */
+footer{
+    background:#0f2027;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    font-size:13px;
+    margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">Academic & Professional Services</div>
+</header>
+
+<section class="services">
+<h2>Advanced Academic Writing Services</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+    <div class="service-icon">📄</div>
+    <h3>Cover Letter Writing</h3>
+    <p>Professional cover letters for jobs & universities (Rs.170)</p>
+    <button onclick="orderWhatsApp('Cover Letter Writing')">Order on WhatsApp</button>
+</div>
+
+<div class="service-card">
+    <div class="service-icon">🎓</div>
+    <h3>Statement of Purpose (SOP)</h3>
+    <p>Strong SOP for university & visa applications (Rs.299)</p>
+    <button onclick="orderWhatsApp('Statement of Purpose')">Order on WhatsApp</button>
+</div>
+
+<div class="service-card">
+    <div class="service-icon">🔥</div>
+    <h3>Motivational Letter</h3>
+    <p>Motivation letters for scholarships & admissions (Rs.199)</p>
+    <button onclick="orderWhatsApp('Motivational Letter')">Order on WhatsApp</button>
+</div>
+
+<div class="service-card">
+    <div class="service-icon">🔥</div>
+    <h3>WEB PAGE DESIGN</h3>
+    <p>ONE PAGE WEBSITE TWO PAGES WEBSITE OR MORE (Rs.500)</p>
+    <button onclick="orderWhatsApp('Motivational Letter')">Order on WhatsApp</button>
+</div>
+
+</div>
+
+<div style="text-align:center;">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+</div>
+
+</section>
+
+<footer>
+© 2025 Academic & Design Hub | Orders via WhatsApp
+</footer>
+
+<script>
+function orderWhatsApp(service){
+    let phone = "923173516616";
+    let msg = "Hello, I want to order *" + service + "*.%0ADeadline:%0ADetails:%0A";
+    window.open("https://wa.me/" + phone + "?text=" + msg, "_blank");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Academic & Professional Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(120deg,#f8fafc,#eef2f7);
+    color:#1f2933;
+}
+
+/* NAVBAR */
+.navbar{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    padding:16px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
+    transition:.3s;
+}
+.logo:hover{ color:#25D366; }
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    position:relative;
+    transition:.3s;
+}
+nav a:hover{ color:#25D366; }
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#25D366;
+    left:0;
+    bottom:-6px;
+    transition:.3s;
+}
+nav a:hover::after{ width:100%; }
+
+/* Hamburger */
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+.menu-toggle span{
+    width:26px;
+    height:3px;
+    background:#fff;
+    border-radius:2px;
+}
+
+/* HERO */
+.hero{
+    padding:95px 20px;
+    text-align:center;
+}
+.hero h2{
+    font-size:36px;
+    margin-bottom:15px;
+    transition:.3s;
+}
+.hero h2:hover{ letter-spacing:1px; }
+
+.hero p{
+    max-width:760px;
+    margin:auto;
+    font-size:16px;
+    color:#4b5563;
+    line-height:1.8;
+}
+
+/* SERVICES */
+.services{
+    padding:75px 60px;
+}
+.services h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:50px;
+    transition:.3s;
+}
+.services h2:hover{ letter-spacing:1px; }
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.service-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+}
+
+.service-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#eef2f7;
+    font-size:34px;
+    transition:.3s;
+}
+.service-card:hover .service-icon{
+    transform:scale(1.1) rotate(4deg);
+}
+
+.service-card h3{
+    font-size:18px;
+    margin-bottom:12px;
+    transition:.3s;
+}
+.service-card h3:hover{ color:#25D366; }
+
+.service-card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:22px;
+}
+
+.service-card button{
+    background:linear-gradient(135deg,#25D366,#1ebe57);
+    border:none;
+    color:#fff;
+    padding:12px 24px;
+    font-size:14px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+.service-card button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(37,211,102,.45);
+}
+
+/* CONTACT */
+.contact{
+    padding:85px 20px;
+    text-align:center;
+}
+.contact h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+.contact p{
+    font-size:16px;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.whatsapp-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:linear-gradient(135deg,#25D366,#1ebe57);
+    color:#fff;
+    padding:14px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:16px;
+    transition:.3s;
+}
+.whatsapp-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(37,211,102,.45);
+}
+
+/* FOOTER */
+footer{
+    background:#0f2027;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    font-size:13px;
+    margin-top:60px;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .navbar{ padding:16px 25px; }
+    .menu-toggle{ display:flex; }
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#0f2027;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        padding:25px 0;
+        display:none;
+    }
+    nav.active{ display:flex; }
+    .hero h2{ font-size:26px; }
+    .services{ padding:50px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">Academic & Professional Services</div>
+
+    <div class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Your One-Stop Academic & Design Solution</h2>
+    <p>
+        We provide professional assignments, PPT presentations, notes preparation,
+        poster designs, advertisement creatives, thesis writing, paid letters, and CV services.
+    </p>
+</section>
+
+<section class="services" id="services">
+<h2>Our Incredible Services</h2>
+
+<div class="service-grid">
+
+<div class="service-card"><div class="service-icon">📘</div><h3>Assignment Writing</h3><p>Professional assignments (Rs.100)</p><button onclick="orderWhatsApp('Assignment Writing')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">📊</div><h3>PPT Presentation</h3><p>Professional PPT slides (Rs.200)</p><button onclick="orderWhatsApp('PPT Presentation')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">📝</div><h3>Notes Preparation</h3><p>Easy exam notes (Rs.250)</p><button onclick="orderWhatsApp('Notes Preparation')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">🖼️</div><h3>Poster Design</h3><p>Creative posters (Rs.380)</p><button onclick="orderWhatsApp('Poster Design')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">📢</div><h3>Advertisement Design</h3><p>Social media ads (Rs.300)</p><button onclick="orderWhatsApp('Advertisement Design')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">🎯</div><h3>Custom Academic Work</h3><p>Any custom task (Rs.400)</p><button onclick="orderWhatsApp('Custom Academic Work')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">📚</div><h3>Thesis Writing</h3><p>Complete / chapter-wise (Price on discussion)</p><button onclick="orderWhatsApp('Thesis Writing')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">💼</div><h3>Paid Letter</h3><p>Paid reference letter (Rs.250)</p><button onclick="orderWhatsApp('Paid Letter')">Order on WhatsApp</button></div>
+
+<div class="service-card"><div class="service-icon">📄</div><h3>CV / Resume Writing</h3><p>Professional ATS-friendly CV (Rs.150)</p><button onclick="orderWhatsApp('CV / Resume Writing')">Order on WhatsApp</button></div>
+
+</div>
+</section>
+
+<div style="text-align:center; margin-top:60px;"> <a href="more-services.html" class="whatsapp-btn"> View More Services → </a> </div>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Order directly via WhatsApp</p>
+    <a class="whatsapp-btn" href="https://wa.me/923173516616" target="_blank">
+        <i class="fab fa-whatsapp"></i> 0317-3516616
+    </a>
+</section>
+
+<footer>
+© 2025 Academic & Design Hub | Orders via WhatsApp
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+function orderWhatsApp(service){
+    let phone = "923173516616";
+    let msg = "Hello, I want to order *" + service + "*.%0ADeadline:%0ADetails:%0A";
+    window.open("https://wa.me/" + phone + "?text=" + msg, "_blank");
+}
+</script>
+
+</body>
+</html>
